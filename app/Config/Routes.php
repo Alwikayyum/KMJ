@@ -38,7 +38,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('home','Pages::index'); 
 $routes->get('profil','Pages::profil');
-$routes->get('artikel','Pages::artikel');
+$routes->get('artikel','Artikel::artikel');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

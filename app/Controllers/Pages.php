@@ -18,11 +18,4 @@ class Pages extends BaseController
         ];
         return view('pages/profil', $data);
     }
-    public function artikel()
-    {
-        $data = [
-            'title' => 'Artikel | Karya Manunggal Jati'
-        ];
-        return view('pages/artikel', $data);
-    }
 }
