@@ -13,8 +13,22 @@ class ArtikelModel extends Model
 
     public function getData()
     {
-        $query = $this->db->query("SELECT * FROM artikel");
+        $query = $this->db->query("SELECT * FROM artikel ORDER BY id DESC");
 
         return $query->getResultArray();
+    }
+
+    public function getArtikel($slug = false)
+    {
+        if ($slug == false) {
+            return $this->getData();
+        }
+
+        return $this->where(['slug' => $slug])->first();
+    }
+
+    public function getWhere($where)
+    {
+        return $this->where($where)->first();
     }
 }

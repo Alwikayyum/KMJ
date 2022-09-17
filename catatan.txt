@@ -1,0 +1,13 @@
+Penambahan fitur pendaftaran online untuk karyawan yang akan melamar kerja. 
+pada fitur pendaftaran, user mendaftarkan sebuah akun untuk digunakan mendaftar. mengupload beberapa berkas yang diperlukan
+untuk pendaftaran (cv, lamaran kerja, foto, ijazah, ktp, dll).
+
+CATATAN PENTING
+ditaruh dimana sistem pendaftaran itu, bagaiamana web itu diakses karena tidak setiap saat ada pendaftaran karyawan, bagaimana 
+jika user lupa password, bagaimana membuat sistem untuk mereset sandi melalui email.
+
+cari info juga soal hosting website
+
+kalau memungkinkan tambah database karyawan yang bisa di akses oleh karyawan itu sendiri. database karyawan berisi data diri 
+pribadi, kalau memungkinkan ditambahkan panjang kontrak atapun ketika memiliki sp. serta data tersebut bisa di akses oleh
+karyawan itu sendiri. 

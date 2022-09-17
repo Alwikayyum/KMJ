@@ -8,16 +8,17 @@
             <h1 class="mt-2">Artikel</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro est odit obcaecati magnam. Repellendus, architecto voluptates amet minima itaque quia placeat sed. Quam possimus magni, reiciendis facere illo sit voluptate!</p>
             <div class="row row-cols-1 row-cols-md-3 g-4">
-                <?php foreach ($artikel as $dataArtikel) : ?>
+                <?php foreach ($dataArtikel as $artikel) : ?>
                     <div class="col">
                         <div class="card h-100">
-                            <img src="/img/<?= $dataArtikel['gambar']; ?>" class="card-img-top" alt="...">
+                            <img src="/img/<?= $artikel['gambar']; ?>" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title"><?= $dataArtikel['judul']; ?></h5>
-                                <p class="card-text"><?= $dataArtikel['artikel']; ?></p>
+                                <h5 class="card-title"><?= $artikel['judul']; ?></h5>                    
+                                <p class="card-text"><?= $artikel['artikel']; ?></p>
                             </div>
+                            <a href="/artikel/<?= $artikel['slug']; ?>" class="btn btn-primary">Baca Selengkapnya</a>
                             <div class="card-footer">
-                                <small class="text-muted">On Proggres</small>
+                                <small class="text-muted"><?= $artikel['penulis']; ?> - at (waktu dibuatnya) </small>
                             </div>
                         </div>
                     </div>

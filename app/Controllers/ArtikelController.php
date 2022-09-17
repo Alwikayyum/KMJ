@@ -2,12 +2,15 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Model;
 use App\Models\ArtikelModel;
+use CodeIgniter\Database\Database;
 use App\Controllers\BaseController;
 
 class ArtikelController extends BaseController
 {
     protected $dataArtikel;
+
 
     public function __construct()
     {
@@ -16,19 +19,23 @@ class ArtikelController extends BaseController
 
     public function index()
     {
-        $artikel = $this->dataArtikel->getData();
-
         $data = [
             'title' => 'Artikel | Karya Manunggal Jati',
-            'artikel' => $artikel
+            'dataArtikel' => $this->dataArtikel->getData()
         ];
-        // $db =   \Config\Database::connect();
-        // $artikel = $db->query("SELECT * FROM artikel");
-        // foreach($artikel->getResultArray() as $row) {
-        //     dd($row);
-        // }
-        
-
         return view('pages/artikel', $data);
+    }
+
+    public function detail($id)
+    {
+        $where = ['selug' => $id];
+        $artikel = $this->dataArtikel->getWhere($where);
+        $data = [
+            'title' => 'Detail Artikel | Karya Manunggal Jati',
+            // 'detailArtikel' => $this->dataArtikel->getArtikel($slug)
+            'dataArtikel' => $artikel
+        ];
+
+        return view('artikel/detail', $data);
     }
 }
